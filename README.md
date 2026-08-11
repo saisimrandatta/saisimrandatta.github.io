@@ -9,8 +9,9 @@ A lightweight static page in plain HTML and CSS — no frameworks, no build step
 Everything lives in `index.html`; styling is in `style.css`. Edit, commit, push
 to `main`, and Pages redeploys within a minute or so.
 
-- **Headshot** — drop the image into `assets/` and uncomment the
-  `profile-picture` block near the top of `index.html`.
+- **Headshot** — `assets/saisimran-datta.jpg`, a 440×440 square. The circle is
+  CSS (`border-radius: 50%` with `object-fit: cover`), so a replacement only
+  needs to be square and centred on the face; nothing else has to change.
 - **CV** — `assets/saisimran-datta-cv.pdf`. Rebuilt from the LaTeX source with
   the phone number removed, since the file is publicly reachable.
 
