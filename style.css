@@ -148,6 +148,7 @@ p { margin-bottom: 1rem; }
 #menu {
   gap: 16px;
   flex-wrap: wrap;
+  align-items: center;
 }
 #menu a {
   text-decoration: none;
@@ -163,6 +164,22 @@ p { margin-bottom: 1rem; }
 }
 #menu .active {
   font-weight: 600;
+}
+#menu .menu-icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  padding: var(--offset);
+  border-radius: var(--radius);
+  transition: background-color 0.2s ease-in-out;
+}
+#menu .menu-icon svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+#menu .menu-icon:hover {
+  background-color: var(--link-hover);
 }
 
 /* ── Main ── */
@@ -193,7 +210,8 @@ p { margin-bottom: 1rem; }
   margin-bottom: 1.1rem;
   text-align: left;
 }
-.home-info .entry-content pre {
+.home-info .entry-content pre,
+.home-info .entry-content a.email {
   display: inline-block;
   font-family: monospace;
   font-size: 0.9rem;
@@ -206,6 +224,23 @@ p { margin-bottom: 1rem; }
   max-width: 100%;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+/* Email chip: same box as the <pre> it replaced, with the icon set inline. */
+.home-info .entry-content a.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.home-info .entry-content a.email:hover {
+  background: var(--link-hover);
+  text-decoration: none;
+}
+.home-info .entry-content a.email svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 .home-info .profile-picture {
   flex: none;
@@ -285,11 +320,15 @@ p { margin-bottom: 1rem; }
   padding: 4px 0;
   font-size: 1rem;
 }
+/* Fixed 20ch gutter — the longest date ("Nov 2025 - Jan 2026") is 19 monospace
+   characters, so every entry's text starts on the same left edge. */
 .news-date {
   color: var(--secondary);
   flex-shrink: 0;
   font-family: monospace;
   font-size: 0.9rem;
+  min-width: 20ch;
+  white-space: nowrap;
 }
 .news-title {
   flex-grow: 1;
@@ -401,6 +440,8 @@ p { margin-bottom: 1rem; }
   flex-shrink: 0;
   font-family: monospace;
   font-size: 0.9rem;
+  min-width: 20ch;
+  white-space: nowrap;
 }
 .talk-title {
   flex-grow: 1;
