@@ -165,18 +165,18 @@ p { margin-bottom: 1rem; }
 #menu .active {
   font-weight: 600;
 }
+/* Sit the mark on the text baseline like a glyph rather than centring it on
+   the 60px nav line box, which reads high against lowercase serif type. */
 #menu .menu-icon {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
+  display: inline-block;
   padding: var(--offset);
   border-radius: var(--radius);
   transition: background-color 0.2s ease-in-out;
 }
 #menu .menu-icon svg {
-  width: 15px;
-  height: 15px;
-  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.22em;
 }
 #menu .menu-icon:hover {
   background-color: var(--link-hover);
