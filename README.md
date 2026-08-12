@@ -12,8 +12,9 @@ to `main`, and Pages redeploys within a minute or so.
 - **Headshot** — `assets/saisimran-datta.jpg`, a 440×440 square. The circle is
   CSS (`border-radius: 50%` with `object-fit: cover`), so a replacement only
   needs to be square and centred on the face; nothing else has to change.
-- **CV** — `assets/saisimran-datta-cv.pdf`. Rebuilt from the LaTeX source with
-  the phone number removed, since the file is publicly reachable.
+- **CV** — not stored here. Both the nav link and the footer icon point at
+  [saisimrandatta/resume](https://github.com/saisimrandatta/resume/blob/main/resume.pdf),
+  so updating the CV means pushing to that repo; this one needs no change.
 
 ## Inspiration
 
